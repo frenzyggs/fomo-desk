@@ -1,15 +1,68 @@
 // STEP 8 iPhone app, Plan B: polls static JSON (no public API, no SSE, no write-back).
-// No secrets in this file: the data folder (d) and token (t) come from the URL hash once,
-// go to localStorage, and the hash is stripped. Every FOMO URL shown comes from the JSON
-// (coin_url / profile_url / signup_url, built by links.py on the desk). None is built here.
+// No secrets in this file. The data folder (d) and token (t) arrive in the URL hash and
+// stay there, so Add to Home Screen can save a launch URL that still has them. They are
+// also mirrored into localStorage and a first-party cookie: iOS standalone does not share
+// Safari localStorage, but since iOS 17.2 it copies cookies once when the icon is created.
+// d and t are never put in the query string (that would hit GitHub Pages logs). Every FOMO
+// URL shown comes from the JSON (coin_url / profile_url / signup_url, built by links.py
+// on the desk). None is built here.
 (function () {
   "use strict";
   // ---------------------------------------------------------------- connect
+  const STORE_D = "desk_d";
+  const STORE_T = "desk_t";
+  function appCookiePath() {
+    const path = location.pathname;
+    return (path.endsWith("/") ? path : path.replace(/[^/]+$/, "")) || "/";
+  }
+  function readStore(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function writeStore(key, value) {
+    try { localStorage.setItem(key, value); } catch (e) {}
+  }
+  function readCookie(name) {
+    const prefix = name + "=";
+    const parts = document.cookie ? document.cookie.split("; ") : [];
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i].lastIndexOf(prefix, 0) === 0) {
+        try { return decodeURIComponent(parts[i].slice(prefix.length)); } catch (e) { return null; }
+      }
+    }
+    return null;
+  }
+  function writeCookie(name, value) {
+    const secure = location.protocol === "https:" ? "; Secure" : "";
+    document.cookie = name + "=" + encodeURIComponent(value) + "; Path=" + appCookiePath() + "; Max-Age=31536000; SameSite=Lax" + secure;
+  }
+  function remember(key, value) {
+    if (!value) return;
+    writeStore(key, value);
+    writeCookie(key, value);
+  }
+  // Hash wins. Otherwise localStorage, otherwise the cookie copied into a home-screen app.
+  function recall(key) {
+    const local = readStore(key);
+    const baked = readCookie(key);
+    if (local) { if (local !== baked) writeCookie(key, local); return local; }
+    if (baked) { writeStore(key, baked); return baked; }
+    return null;
+  }
   const h = new URLSearchParams(location.hash.slice(1));
-  if (h.get("d")) localStorage.setItem("desk_d", h.get("d"));
-  if (h.get("t")) localStorage.setItem("desk_t", h.get("t"));
-  if (location.hash) history.replaceState(null, "", location.pathname + location.search);
-  const D = localStorage.getItem("desk_d");
+  const hashD = h.get("d");
+  const hashT = h.get("t");
+  if (hashD) remember(STORE_D, hashD);
+  if (hashT) remember(STORE_T, hashT);
+  const D = hashD || recall(STORE_D);
+  const T = hashT || recall(STORE_T);
+  // Bare URL (bookmark, or an icon saved before the hash was kept): put d/t back on the
+  // hash so the next Add to Home Screen captures them. Never as a query string.
+  if (D && !hashD) {
+    const next = new URLSearchParams();
+    next.set("d", D);
+    if (T) next.set("t", T);
+    history.replaceState(null, "", location.pathname + location.search + "#" + next.toString());
+  }
   const base = new URL("./", location.href);
   const url = f => new URL("d/" + encodeURIComponent(D) + "/" + f + "?_=" + Date.now(), base);
   async function get(f) {
@@ -61,9 +114,11 @@
       const la = S.decisions.auditor[0];
       S.lastAudit = la ? await tryGet(`audit/${la.mint}.json`) : null;
       Object.assign(S, { state: st, chart: ch, chartAll: all, activity: act, account: acc, settings: set, events: ev, loaded: true });
-      const age = Date.now() / 1000 - st.heartbeat;
-      S.error = age > Math.max(60, S.poll * 4);   // desk stopped writing: offline, keep the last good numbers
-      if (!S.error) S.lastGood = st.heartbeat;
+      // Plan B republishes a few times a day, so a healthy snapshot is often minutes or
+      // hours old. Remember its heartbeat anyway. The red banner is a failed fetch, or a
+      // payload that itself says the desk is down — not a stale timestamp.
+      if (Number.isFinite(Number(st.heartbeat))) S.lastGood = Number(st.heartbeat);
+      S.error = payloadSaysDown(st);
       if (S.screen) await loadScreen(S.screen);
     } catch (e) {
       S.error = true;
@@ -74,12 +129,34 @@
   }
   setInterval(renderError, 1000);
 
+  // status "ok" (and anything else that isn't an explicit down) is a loaded snapshot.
+  function payloadSaysDown(st) {
+    const s = String(st && st.status != null ? st.status : "").trim().toLowerCase();
+    return s === "down" || s === "offline" || s === "stopped" || s === "error" || s === "dead";
+  }
+  function snapshotText(ts) {
+    const d = new Date(ts * 1000), now = new Date();
+    const same = d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
+    const time = d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    if (same) return "Snapshot from " + time;
+    return "Snapshot from " + d.toLocaleDateString([], { month: "short", day: "numeric" }) + ", " + time;
+  }
   function renderError() {
     const row = $("error-row");
-    if (!S.error) { row.hidden = true; return; }
-    const n = Math.max(0, Math.ceil((S.nextPoll - Date.now()) / 1000));
-    row.hidden = false;
-    row.textContent = `Desk offline · retrying in ${n}s · last update ${S.lastGood ? new Date(S.lastGood * 1000).toLocaleTimeString() : "never"}`;
+    const snap = $("snapshot-row");
+    if (S.error) {
+      if (snap) snap.hidden = true;
+      const n = Math.max(0, Math.ceil((S.nextPoll - Date.now()) / 1000));
+      row.hidden = false;
+      row.textContent = `Desk offline · retrying in ${n}s · last update ${S.lastGood ? new Date(S.lastGood * 1000).toLocaleTimeString() : "never"}`;
+      return;
+    }
+    row.hidden = true;
+    if (!snap) return;
+    const stale = S.loaded && Number.isFinite(S.lastGood) && (Date.now() / 1000 - S.lastGood) > Math.max(60, S.poll * 4);
+    if (!stale) { snap.hidden = true; return; }
+    snap.hidden = false;
+    snap.textContent = snapshotText(S.lastGood);
   }
 
   // ---------------------------------------------------------------- navigation
