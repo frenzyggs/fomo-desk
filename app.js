@@ -434,28 +434,64 @@
   }
 
   // ---------------------------------------------------------------- ACCOUNT
+  // STEP 10 public names/labels; values still read from internal trading keys (aliases).
+  // [internalKey, publicLabel, unit, transform?]  transform "abs" = show positive drop for flush.
   const GROUPS = {
-    scanner: [["waiting_room_poll_s", "Waiting-room poll", "s"], ["min_liquidity_usd", "Min liquidity", "$"], ["max_top10_pct", "Top 10 max", "%"],
-      ["max_h1_change_pct", "1h change max", "%"], ["min_pool_age_min", "Pool age min", "min"], ["waiting_room_max_min", "Waiting room max", "min"],
-      ["copycat_h24_pct", "Copycat 24h runner", "%"], ["dexscreener_max_req_per_min", "DexScreener max", "/min"],
-      ["dexscreener_429_wait_s", "429 wait", "s"], ["ws_silent_s", "Websocket silent", "s"]],
-    auditor: [["max_dev_pct", "Dev max", "%"], ["max_top10_pct", "Top 10 max", "%"], ["min_lp_burned_or_locked_pct", "LP burned or locked", "%"],
-      ["max_liq_drop_since_scanner_pct", "Liquidity drop max", "%"], ["min_pool_age_min", "Pool age min", "min"], ["max_bundled", "Bundled max", ""],
-      ["max_delegate_accounts", "Delegate accounts max", ""], ["source_retries", "Source retries", ""], ["source_retry_gap_s", "Retry gap", "s"]],
-    analyst: [["state_max_chars", "State max", "chars"], ["gate_alive_6h", "alive_6h min", ""], ["gate_organic", "organic min", ""],
-      ["gate_chase", "chase max", ""], ["gate_score", "Score min", ""], ["http_timeout_s", "Timeout", "s"], ["http_retry_after_s", "Retry after", "s"],
-      ["http_429_queue_s", "429 queue", "s"], ["rules_alive_volume_h1", "Rules: volume 1h", "$"], ["rules_organic_buys_h1", "Rules: buys 1h", ""],
-      ["rules_organic_bundled_threshold", "Rules: bundled threshold", ""], ["rules_organic_bundled_factor", "Rules: bundled factor", "×"],
-      ["rules_flush_m5_pct", "Rules: flush 5m", "%"], ["rules_chase_h1_pct", "Rules: chase 1h", "%"]],
-    executor: [["size_stack_pct", "Size", "% of stack"], ["size_max_pool_liq_pct", "Max pool liquidity", "%"], ["min_size_usd", "Min size", "$"],
-      ["recheck_liq_drop_pct", "Re-check liquidity drop", "%"], ["recheck_price_run_pct", "Re-check price run", "%"], ["live_missed_min", "LIVE missed after", "min"]],
-    risk: [["poll_s", "Poll", "s"], ["stop_pct", "Stop", "%"], ["trail_on_pct", "Trail on", "%"], ["trail_giveback_pct", "Trail giveback", "%"],
-      ["timeout_h", "Timeout", "h"], ["timeout_min_gain_pct", "Timeout min gain", "%"], ["live_sold_repush_min", "LIVE re-push", "min"],
-      ["no_price_polls", "No-price polls", ""], ["dexscreener_429_backoff_s", "429 backoff", "s"]],
+    scanner: [
+      ["min_liquidity_usd", "min_liquidity_usd", "$"],
+      ["max_top10_pct", "max_top10_pct", "%"],
+      ["max_h1_change_pct", "max_h1_change_pct", "%"],
+      ["waiting_room_poll_s", "poll_s", "s"],
+      ["min_pool_age_min", "min_pool_age_min", "min"],
+      ["waiting_room_max_min", "max_wait_min", "min"],
+      ["copycat_h24_pct", "runner_h24_pct", "%"],
+    ],
+    auditor: [
+      ["max_dev_pct", "max_dev_pct", "%"],
+      ["max_top10_pct", "max_top10_pct", "%"],
+      ["min_lp_burned_or_locked_pct", "min_lp_locked_pct", "%"],
+      ["min_pool_age_min", "min_pool_age_min", "min"],
+      ["max_bundled", "max_bundled", ""],
+      ["max_delegate_accounts", "max_delegated_accounts", ""],
+      ["source_retries", "retries", ""],
+    ],
+    analyst: [
+      ["gate_alive_6h", "min_alive_6h", ""],
+      ["gate_organic", "min_organic", ""],
+      ["gate_chase", "max_chase", ""],
+      ["gate_score", "min_score", ""],
+      ["http_timeout_s", "timeout_s", "s"],
+      ["rules_alive_volume_h1", "alive_volume_h1", "$"],
+      ["rules_organic_buys_h1", "organic_buys_h1", ""],
+      ["rules_organic_bundled_factor", "bundled_penalty", "×"],
+      ["rules_flush_m5_pct", "flush_drop_m5_pct", "%", "abs"],
+      ["rules_chase_h1_pct", "chase_h1_pct", "%"],
+    ],
+    executor: [
+      ["size_stack_pct", "stack_pct", "% of stack"],
+      ["size_max_pool_liq_pct", "max_pool_pct", "%"],
+      ["min_size_usd", "min_ticket_usd", "$"],
+      ["recheck_liq_drop_pct", "recheck_liq_drop_pct", "%"],
+      ["recheck_price_run_pct", "recheck_price_up_pct", "%"],
+      ["live_missed_min", "confirm_window_min", "min"],
+    ],
+    risk: [
+      ["poll_s", "poll_s", "s"],
+      ["stop_pct", "stop_pct", "%"],
+      ["trail_on_pct", "trail_start_pct", "%"],
+      ["trail_giveback_pct", "trail_pct", "%"],
+      ["timeout_h", "timeout_h", "h"],
+      ["timeout_min_gain_pct", "timeout_min_gain_pct", "%"],
+      ["live_sold_repush_min", "confirm_window_min", "min"],
+    ],
   };
-  function settingRow(key, label, unit, v) {
-    const val = v == null ? "" : v, max = v == null ? 100 : Math.max(Math.abs(v) * 3, 1), min = v != null && v < 0 ? -max : 0;
-    const stepv = Math.abs(v) < 2 && v % 1 !== 0 ? 0.01 : 1;
+  function settingRow(key, label, unit, v, transform) {
+    let shown = v;
+    if (transform === "abs" && v != null) shown = Math.abs(Number(v));
+    const val = shown == null ? "" : shown;
+    const max = shown == null ? 100 : Math.max(Math.abs(shown) * 3, 1);
+    const min = 0;
+    const stepv = Math.abs(shown) < 2 && shown % 1 !== 0 ? 0.01 : 1;
     return `<div class="setting"><div class="top"><span>${esc(label)}</span><span class="sec">${esc(unit)}</span></div>
       <div style="display:flex;gap:10px;align-items:center"><input type="range" min="${min}" max="${max}" step="${stepv}" value="${val}" disabled aria-label="${esc(label)}">
       <input type="number" value="${val}" disabled aria-label="${esc(label)} value"></div></div>`;
@@ -471,7 +507,7 @@
         <div class="seg">${["PAPER", "LIVE"].map(m => `<button data-act="mode" data-mode="${m}" class="${acc.mode === m ? "on" : ""}">${m}</button>`).join("")}</div></div>
         <div class="row" id="live-confirm" hidden><input class="field" id="live-input" placeholder="LIVE" style="width:120px" autocapitalize="characters">
           <button class="smallbtn" data-act="liveConfirm">Confirm</button></div>
-        <div class="row"><div class="main"><div class="t">Stack</div><div class="s">${acc.mode === "LIVE" ? "Set with “stack N”" : "PAPER simulated balance"}</div></div>
+        <div class="row"><div class="main"><div class="t">Stack</div><div class="s">${acc.mode === "LIVE" ? "Set with “stack N”" : "PAPER balance (default paper_start_stack $200)"}</div></div>
           <input class="field" value="${acc.stack == null ? "" : esc(acc.stack)}" placeholder="not set" disabled></div></div>
       <div class="group">
         ${acc.profile_url ? `<div class="row">${ext(acc.profile_url, `<div class="main"><div class="t">Your FOMO profile</div><div class="s">@${esc(acc.handle)}</div></div>`, "main")}<span class="ter">›</span></div>` : ""}
@@ -483,13 +519,19 @@
         ${standalone ? `<div class="row"><div class="main"><div class="t">Enable notifications</div><div class="s">Plan B has no /api/push, so there's no web push here. Pushes go to Discord.</div></div></div>` : ""}</div>
       <div class="group-h">Desk</div>
       <div class="group">
-        <div class="row"><div class="main"><div class="t">Below minimum size</div></div><span class="sec">${esc(set.below_min || "not set")}</span></div>
+        <div class="row"><div class="main"><div class="t">below_min</div><div class="s">bump or skip when ticket under min</div></div><span class="sec">${esc(set.below_min || "bump")}</span></div>
+        <div class="row"><div class="main"><div class="t">paper_start_stack</div><div class="s">PAPER night starting stack</div></div><span class="sec">${set.paper_start_stack == null ? "200" : "$" + Number(set.paper_start_stack).toFixed(2)}</span></div>
+        <div class="row"><div class="main"><div class="t">report_time</div><div class="s">Europe/Amsterdam</div></div><span class="sec">${esc(set.report_time || "08:00")}</span></div>
+        <div class="row"><div class="main"><div class="t">push_rejects</div></div><span class="sec">${set.push_rejects ? "true" : "false"}</span></div>
+        <div class="row"><div class="main"><div class="t">fees_ref_discount</div></div><span class="sec">${set.fees_ref_discount == null ? "0.1" : esc(set.fees_ref_discount)}</span></div>
         <div class="row"><div class="main"><div class="t">Analyst mode</div></div><span class="sec">${esc(set.analyst_mode || "–")}</span></div>
-        <div class="row"><div class="main"><div class="t">Notifier</div></div><span class="sec">${esc(set.notifier || "–")}</span></div></div>
+        <div class="row"><div class="main"><div class="t">Notifier</div></div><span class="sec">${esc(set.notifier || "–")}</span></div>
+        <div class="row"><div class="main"><div class="t">rpc_url</div></div><span class="sec" style="max-width:55%;overflow:hidden;text-overflow:ellipsis">${esc(set.rpc_url || "–")}</span></div></div>
       <p class="note">Settings are read-only in the app on Plan B. Change them in the desk chat (STEP 9).</p>
       ${AGENTS.map(a => `<div class="group-h" id="set-${a}">${NAMES[a]}</div><div class="group">
-        ${a === "auditor" ? `<div class="row"><div class="main"><div class="t">Take apart before buying</div><div class="s">On (default)</div></div><button class="switch-hit" data-act="auditToggle"><span class="switch on"></span></button></div>` : ""}
-        ${GROUPS[a].map(([k, l, u]) => settingRow(k, l, u, tr[k])).join("")}</div>`).join("")}
+        ${a === "auditor" ? `<div class="row"><div class="main"><div class="t">enabled</div><div class="s">Take apart before buying</div></div><button class="switch-hit" data-act="auditToggle"><span class="switch ${set.auditor_enabled === false ? "" : "on"}"></span></button></div>` : ""}
+        ${a === "analyst" ? `<div class="row"><div class="main"><div class="t">mode</div></div><span class="sec">${esc(set.analyst_mode || "jev")}</span></div>` : ""}
+        ${GROUPS[a].map(([k, l, u, t]) => settingRow(k, l, u, tr[k], t)).join("")}</div>`).join("")}
     </div>`;
   }
 
