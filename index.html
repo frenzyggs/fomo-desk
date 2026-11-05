@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="FOMO Desk">
+<meta name="theme-color" content="#000000">
+<meta name="referrer" content="no-referrer">
+<title>FOMO Trading Desk</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<main>
+  <h1>FOMO Trading Desk</h1>
+  <p id="conn" class="pill">Not connected</p>
+  <dl>
+    <dt>Heartbeat</dt><dd id="hb">-</dd>
+    <dt>Mode</dt><dd id="mode">PAPER</dd>
+    <dt>Notifier</dt><dd id="notifier">discord</dd>
+    <dt>Handle</dt><dd id="handle">ValHD</dd>
+    <dt>Agents</dt><dd id="agents">-</dd>
+  </dl>
+  <canvas id="chart" width="600" height="200"></canvas>
+  <h2>Activity</h2>
+  <ul id="activity"></ul>
+</main>
+<script src="vapid-public.js"></script>
+<script src="chart.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
