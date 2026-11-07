@@ -1,1 +1,217 @@
-{"app":"FOMO trading desk","mode":"PAPER","notifier":"discord","handle":"ValHD","analyst_mode":"jev","started":1793973143.4790864,"agents":{"scanner":"running","auditor":"running","analyst":"running","executor":"running","risk":"running"},"queues":{"auditor":0,"analyst":0,"executor":0,"risk":0},"balance":200.0,"todayPct":null,"multiplier":null,"cards":{"scanner":{"title":"3 pools","pools":3},"auditor":{"title":"0 taken apart","rejected":0,"rejectedText":"0 rejected","last":"pool too young"},"analyst":{"title":"Scoring","score":null,"green":false},"executor":{"title":"0 trades","trades":0,"last":null,"status":null},"risk":{"title":null,"open":0,"pills":[{"text":"stop -6%","color":"red"},{"text":"trail 20%","color":"green"}]}},"feed":[{"ts":1793984182.2133198,"kind":"scan","text":"A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS \u00b7 killed \u00b7 never qualified"},{"ts":1793984182.2135794,"kind":"scan","text":"Xs3oZwbHvqis4NYcf4YKWmEia2eC84wSiVrcYcTqpH8 \u00b7 killed \u00b7 never qualified"},{"ts":1793984182.2137918,"kind":"scan","text":"72yxYmhLgDGwdyi2b9GjDynBB6VuG3kDxNKqDbzXh5bi \u00b7 killed \u00b7 never qualified"},{"ts":1793984182.2141228,"kind":"scan","text":"The Pilot Picasso \u00b7 killed \u00b7 liq $30.6K"},{"ts":1793984302.4192388,"kind":"scan","text":"peekaboo \u00b7 killed \u00b7 liq $9.3"},{"ts":1793984422.6693635,"kind":"scan","text":"Hold Oversized Diamond Lady \u00b7 killed \u00b7 liq $29.1K"},{"ts":1793984422.6699495,"kind":"scan","text":"Finance Inu \u00b7 killed \u00b7 +188% in 1h"},{"ts":1793984602.889425,"kind":"scan","text":"aigc \u00b7 killed \u00b7 liq $6.1"},{"ts":1793991328.1623511,"kind":"scan","text":"CatCut \u00b7 killed \u00b7 liq $5.6"},{"ts":1793991328.1628964,"kind":"scan","text":"red ape \u00b7 killed \u00b7 liq $2.2"},{"ts":1793991388.2721465,"kind":"scan","text":"HOKORI \u00b7 killed \u00b7 liq $12.6K"},{"ts":1793991914.3227139,"kind":"scan","text":"memes were different \u00b7 killed \u00b7 liq $4.5"},{"ts":1793991974.4632738,"kind":"scan","text":"px \u00b7 killed \u00b7 liq $33.9"},{"ts":1793992154.841229,"kind":"scan","text":"WORLD COIN 2 \u00b7 killed \u00b7 liq $14.2K"},{"ts":1793992154.841699,"kind":"scan","text":"wolf dog \u00b7 killed \u00b7 liq $86.4"},{"ts":1793992367.481065,"kind":"scan","text":"Solana Solana Solana \u00b7 killed \u00b7 liq $14.6"},{"ts":1793992892.447862,"kind":"scan","text":"GoldBit \u00b7 killed \u00b7 liq $10.2"},{"ts":1794034572.6364858,"kind":"scan","text":"Inadmam \u00b7 killed \u00b7 never qualified"},{"ts":1794034572.6368146,"kind":"scan","text":"MNSTy46haEN7sEaeXAWBXG6zHaRikCvqf3krAEDzxr2 \u00b7 killed \u00b7 never qualified"},{"ts":1794034572.6370814,"kind":"scan","text":"White Monster \u00b7 killed \u00b7 never qualified"},{"ts":1794034572.6374047,"kind":"scan","text":"The White Monster \u00b7 killed \u00b7 never qualified"},{"ts":1794035248.735203,"kind":"scan","text":"JOKEST \u00b7 killed \u00b7 liq $37.1"},{"ts":1794035368.903939,"kind":"scan","text":"SATINU \u00b7 killed \u00b7 liq $8.1"},{"ts":1794035456.6316206,"kind":"scan","text":"funny trauma  \u00b7 killed \u00b7 liq $13.4K"},{"ts":1794037006.8729699,"kind":"scan","text":"Tucker2028 \u00b7 killed \u00b7 liq $14.5"},{"ts":1794037006.8734303,"kind":"scan","text":"Hairicorn \u00b7 killed \u00b7 liq $16.8K"},{"ts":1794037187.029759,"kind":"scan","text":"CLOWN \u00b7 killed \u00b7 liq $101.7"},{"ts":1794037247.1105103,"kind":"scan","text":"SUPER I FIREBALL \u00b7 killed \u00b7 liq $159.8"},{"ts":1794049306.6657753,"kind":"scan","text":"Alien Shiba Inux \u00b7 killed \u00b7 liq $50.6"},{"ts":1794049426.819981,"kind":"scan","text":"TrendTrader Pro \u00b7 killed \u00b7 liq $30.3K"}],"heartbeat":1794049621.7406046,"status":"ok","plan":"B","poll_seconds":15}
+{
+  "app": "FOMO trading desk",
+  "mode": "PAPER",
+  "notifier": "discord",
+  "handle": "ValHD",
+  "analyst_mode": "jev",
+  "started": 1793973143.4790864,
+  "agents": {
+    "scanner": "running",
+    "auditor": "running",
+    "analyst": "running",
+    "executor": "running",
+    "risk": "running"
+  },
+  "queues": {
+    "auditor": 0,
+    "analyst": 0,
+    "executor": 0,
+    "risk": 0
+  },
+  "balance": 200.0,
+  "todayPct": null,
+  "multiplier": null,
+  "cards": {
+    "scanner": {
+      "title": "10 pools",
+      "pools": 10
+    },
+    "auditor": {
+      "title": "0 taken apart",
+      "rejected": 0,
+      "rejectedText": "0 rejected",
+      "last": "pool too young"
+    },
+    "analyst": {
+      "title": "Scoring",
+      "score": null,
+      "green": false
+    },
+    "executor": {
+      "title": "0 trades",
+      "trades": 0,
+      "last": null,
+      "status": null
+    },
+    "risk": {
+      "title": null,
+      "open": 0,
+      "pills": [
+        {
+          "text": "stop -6%",
+          "color": "red"
+        },
+        {
+          "text": "trail 20%",
+          "color": "green"
+        }
+      ]
+    }
+  },
+  "feed": [
+    {
+      "ts": 1793991328.1623511,
+      "kind": "scan",
+      "text": "CatCut · killed · liq $5.6"
+    },
+    {
+      "ts": 1793991328.1628964,
+      "kind": "scan",
+      "text": "red ape · killed · liq $2.2"
+    },
+    {
+      "ts": 1793991388.2721465,
+      "kind": "scan",
+      "text": "HOKORI · killed · liq $12.6K"
+    },
+    {
+      "ts": 1793991914.3227139,
+      "kind": "scan",
+      "text": "memes were different · killed · liq $4.5"
+    },
+    {
+      "ts": 1793991974.4632738,
+      "kind": "scan",
+      "text": "px · killed · liq $33.9"
+    },
+    {
+      "ts": 1793992154.841229,
+      "kind": "scan",
+      "text": "WORLD COIN 2 · killed · liq $14.2K"
+    },
+    {
+      "ts": 1793992154.841699,
+      "kind": "scan",
+      "text": "wolf dog · killed · liq $86.4"
+    },
+    {
+      "ts": 1793992367.481065,
+      "kind": "scan",
+      "text": "Solana Solana Solana · killed · liq $14.6"
+    },
+    {
+      "ts": 1793992892.447862,
+      "kind": "scan",
+      "text": "GoldBit · killed · liq $10.2"
+    },
+    {
+      "ts": 1794034572.6364858,
+      "kind": "scan",
+      "text": "Inadmam · killed · never qualified"
+    },
+    {
+      "ts": 1794034572.6368146,
+      "kind": "scan",
+      "text": "MNSTy46haEN7sEaeXAWBXG6zHaRikCvqf3krAEDzxr2 · killed · never qualified"
+    },
+    {
+      "ts": 1794034572.6370814,
+      "kind": "scan",
+      "text": "White Monster · killed · never qualified"
+    },
+    {
+      "ts": 1794034572.6374047,
+      "kind": "scan",
+      "text": "The White Monster · killed · never qualified"
+    },
+    {
+      "ts": 1794035248.735203,
+      "kind": "scan",
+      "text": "JOKEST · killed · liq $37.1"
+    },
+    {
+      "ts": 1794035368.903939,
+      "kind": "scan",
+      "text": "SATINU · killed · liq $8.1"
+    },
+    {
+      "ts": 1794035456.6316206,
+      "kind": "scan",
+      "text": "funny trauma  · killed · liq $13.4K"
+    },
+    {
+      "ts": 1794037006.8729699,
+      "kind": "scan",
+      "text": "Tucker2028 · killed · liq $14.5"
+    },
+    {
+      "ts": 1794037006.8734303,
+      "kind": "scan",
+      "text": "Hairicorn · killed · liq $16.8K"
+    },
+    {
+      "ts": 1794037187.029759,
+      "kind": "scan",
+      "text": "CLOWN · killed · liq $101.7"
+    },
+    {
+      "ts": 1794037247.1105103,
+      "kind": "scan",
+      "text": "SUPER I FIREBALL · killed · liq $159.8"
+    },
+    {
+      "ts": 1794049306.6657753,
+      "kind": "scan",
+      "text": "Alien Shiba Inux · killed · liq $50.6"
+    },
+    {
+      "ts": 1794049426.819981,
+      "kind": "scan",
+      "text": "TrendTrader Pro · killed · liq $30.3K"
+    },
+    {
+      "ts": 1794049666.981222,
+      "kind": "scan",
+      "text": "GTA6 · killed · liq $24.7K"
+    },
+    {
+      "ts": 1794050122.3804796,
+      "kind": "scan",
+      "text": "GTA6 COIN · killed · liq $40.8"
+    },
+    {
+      "ts": 1794061593.4699843,
+      "kind": "scan",
+      "text": "SK Hynix · killed · liq $1.7K"
+    },
+    {
+      "ts": 1794063380.4566398,
+      "kind": "scan",
+      "text": "Real life fire emoji  · killed · liq $63.2"
+    },
+    {
+      "ts": 1794063440.5408099,
+      "kind": "scan",
+      "text": "K9 Neo · killed · liq $13.5K"
+    },
+    {
+      "ts": 1794063440.541367,
+      "kind": "scan",
+      "text": "Pikachu Strategy · killed · liq $24.3K"
+    },
+    {
+      "ts": 1794063662.8751552,
+      "kind": "scan",
+      "text": "debtdog · killed · liq $26.4K"
+    },
+    {
+      "ts": 1794063722.9695344,
+      "kind": "scan",
+      "text": "Shiba King · killed · liq $15.5"
+    }
+  ],
+  "heartbeat": 1794063725.5335104,
+  "status": "ok",
+  "plan": "B",
+  "poll_seconds": 15
+}
