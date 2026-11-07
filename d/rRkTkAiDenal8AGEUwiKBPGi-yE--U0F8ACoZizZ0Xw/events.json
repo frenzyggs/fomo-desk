@@ -1,1 +1,357 @@
-{"updated":1794049621.7399473,"items":[{"type":"scan","ts":"2026-11-07T11:03:46Z","mint":"E5c1JvHbwEf3ud2m4PXPMugcMDevLrnskq7sj1FTpump","verdict":"kill","reason":"liq $30.3K"},{"type":"scan","ts":"2026-11-07T11:01:46Z","mint":"S85PKXowGaMcroEs9ZJXqUdUJK27uTdwG7SzCjXpump","verdict":"kill","reason":"liq $50.6"},{"type":"scan","ts":"2026-11-07T07:40:47Z","mint":"4qTycVWcJYo8H22e9qJ1cyj7wNjAPbT1ZRncrVoxpump","verdict":"kill","reason":"liq $159.8"},{"type":"scan","ts":"2026-11-07T07:39:47Z","mint":"AoHnvaFqHqEVbQfg2Yd38UFC38VzhSvJ8e75224apump","verdict":"kill","reason":"liq $101.7"},{"type":"scan","ts":"2026-11-07T07:36:46Z","mint":"DFq4aBnZkNd4PcKaSb37wRpaUGKAFUXenGbd78pTpump","verdict":"kill","reason":"liq $16.8K"},{"type":"scan","ts":"2026-11-07T07:36:46Z","mint":"CyzEShfs4U34VL1PMrGh8c4i61v9atrLxcSChVz4pump","verdict":"kill","reason":"liq $14.5"},{"type":"scan","ts":"2026-11-07T07:10:56Z","mint":"FFgnd8bifG8zGBE7dij7g3HWp4gveJS4gDyjdk5epump","verdict":"kill","reason":"liq $13.4K"},{"type":"scan","ts":"2026-11-07T07:09:28Z","mint":"Df6HMH5o829maxWdctthUK5QPdpYjYeCxfjLjFQRpump","verdict":"kill","reason":"liq $8.1"},{"type":"scan","ts":"2026-11-07T07:07:28Z","mint":"6NrnT77TwP5eLdj9Mfo5Nwau6CRmDk8YF3e1nQ3Tpump","verdict":"kill","reason":"liq $37.1"},{"type":"scan","ts":"2026-11-07T06:56:12Z","mint":"BtyhNqu58cepGmMrccos1rSuStFPo621MdtgY9qLpump","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-07T06:56:12Z","mint":"H6MZWk8cWxKoUULGMakxyAg2FuPQKcRzvkDKggFtgV5n","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-07T06:56:12Z","mint":"MNSTy46haEN7sEaeXAWBXG6zHaRikCvqf3krAEDzxr2","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-07T06:56:12Z","mint":"EXKY4iBRC4CbA4uWj9NLDVqVjNGSCED9KJ4sagCMpump","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-06T19:21:32Z","mint":"Di4iAmK8d2DGp6XcSCrY3dD9rt9dHTA4Gt5a43m7pump","verdict":"kill","reason":"liq $10.2"},{"type":"scan","ts":"2026-11-06T19:12:47Z","mint":"ELen4K1CzQGuhAieJhJQqDTJwKkgXUWXVQoRnYPvpump","verdict":"kill","reason":"liq $14.6"},{"type":"scan","ts":"2026-11-06T19:09:14Z","mint":"9mvYbACtwRF5SsWbajxEJHzA9N4BTzmwWuYz1A7npump","verdict":"kill","reason":"liq $86.4"},{"type":"scan","ts":"2026-11-06T19:09:14Z","mint":"BxB5RVvNbXJLjEhTbLgXBpjSgxD7KGvvXvaJVsi8pump","verdict":"kill","reason":"liq $14.2K"},{"type":"scan","ts":"2026-11-06T19:06:14Z","mint":"FhLjjtZRSGqE1o8KjBDRh5ApAFgZD1V9HaQReea1pump","verdict":"kill","reason":"liq $33.9"},{"type":"scan","ts":"2026-11-06T19:05:14Z","mint":"27e6siMqFF8FAhWZuNpCbfC1AXMNd4StjjRNZRgRpump","verdict":"kill","reason":"liq $4.5"},{"type":"scan","ts":"2026-11-06T18:56:28Z","mint":"5DLMQuAJdQp4sWvPoNqNqLx8uEjWcFBaTLxLDRCBpump","verdict":"kill","reason":"liq $12.6K"},{"type":"scan","ts":"2026-11-06T18:55:28Z","mint":"CRzmC31zoFMZjCJssEfeo6Kp3XFm3NcDZUhK2Hagpump","verdict":"kill","reason":"liq $2.2"},{"type":"scan","ts":"2026-11-06T18:55:28Z","mint":"GL4uo5jvgZAHUFgGfTxqZwy8EPmrtqLvMgPWTDXUpump","verdict":"kill","reason":"liq $5.6"},{"type":"scan","ts":"2026-11-06T17:03:22Z","mint":"CwcBCbWcoZcnGkZLZuAFLhkmxnh8Me2KvksY2LKxpump","verdict":"kill","reason":"liq $6.1"},{"type":"scan","ts":"2026-11-06T17:00:22Z","mint":"R8z7JdTiJVjUqRZMDfHdf4EW2ufL19NJ3tGCTNGpump","verdict":"kill","reason":"+188% in 1h"},{"type":"scan","ts":"2026-11-06T17:00:22Z","mint":"8csCzE6QWAjNRiVNNSSn7ifR2CZHFj3sWuTzGSDapump","verdict":"kill","reason":"liq $29.1K"},{"type":"scan","ts":"2026-11-06T16:58:22Z","mint":"2WfFpawoUzTteUsV1bj5b6CdkEfu6Aoea5L4qhBmpump","verdict":"kill","reason":"liq $9.3"},{"type":"scan","ts":"2026-11-06T16:56:22Z","mint":"Cgs33XVwju57dToPZSRxAiEMxj9qWGxR7CT8j44pump","verdict":"kill","reason":"liq $30.6K"},{"type":"scan","ts":"2026-11-06T16:56:22Z","mint":"72yxYmhLgDGwdyi2b9GjDynBB6VuG3kDxNKqDbzXh5bi","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-06T16:56:22Z","mint":"Xs3oZwbHvqis4NYcf4YKWmEia2eC84wSiVrcYcTqpH8","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-06T16:56:22Z","mint":"A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-06T16:56:22Z","mint":"DNUTsCvKbKwu2RM72cUuW3TD9YpzArzACcqYQssjPLSk","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-06T16:56:22Z","mint":"6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-06T16:56:22Z","mint":"FgLfLhT3QoPWynZ53L3KUUsPhspWbdPUfMtmPfezXci6","verdict":"kill","reason":"never qualified"},{"type":"scan","ts":"2026-11-06T15:30:34Z","mint":"C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump","verdict":"kill","reason":"top 10 hold 76%"},{"type":"scan","ts":"2026-11-06T15:29:31Z","mint":"71rcxU9jYt6ERJ5wSWy88px6XfDFLTV6jGMHLbK5pump","verdict":"kill","reason":"liq $48.2"},{"type":"scan","ts":"2026-11-06T15:29:31Z","mint":"BNHAfUV21odrcFDKrqLmBDr6JREXE7c3yhuWBSNJpump","verdict":"kill","reason":"liq $23.6K"},{"type":"scan","ts":"2026-11-06T15:28:31Z","mint":"3M8Nndh1bYN6RDGecM5fHMgQDEcGKVSh59M2qqNRpump","verdict":"kill","reason":"liq $13.4K"},{"type":"scan","ts":"2026-11-06T15:22:30Z","mint":"yjgShaU6e2WhspLAKtVfC8RcD5tSiJBs5FLiwgzpump","verdict":"kill","reason":"liq $28.1"},{"type":"scan","ts":"2026-11-06T15:20:30Z","mint":"1yTgVJDuqPVtaUFR22f3TG2gtgkjQFkLN8ECv7rpump","verdict":"kill","reason":"liq $1.9K"},{"type":"scan","ts":"2026-11-06T15:20:30Z","mint":"7JRhEEneULfcUEN3sPUL8MFxzKNyrDYj6Vu21swDpump","verdict":"kill","reason":"liq $23.6K"},{"type":"scan","ts":"2026-11-06T15:16:29Z","mint":"XBs5WbVb7mnFnLKoJ9DzdwYhn7qNQuBc5M6DPuapump","verdict":"kill","reason":"liq $24.7K"},{"type":"audit_layer","ts":"2026-11-06T15:15:32Z","mint":"Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump","layer":"6","name":"Pool age","value":"pool too young","pass":0},{"type":"audit_layer","ts":"2026-11-06T15:15:32Z","mint":"Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump","layer":"5","name":"Liquidity","value":"100% locked","pass":1},{"type":"audit_layer","ts":"2026-11-06T15:15:32Z","mint":"Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump","layer":"4","name":"Top 10","value":"16.6%","pass":1},{"type":"audit_layer","ts":"2026-11-06T15:15:30Z","mint":"Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump","layer":"3","name":"Dev wallet","value":"0% \u00b7 sold 0","pass":1},{"type":"audit_layer","ts":"2026-11-06T15:15:30Z","mint":"Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump","layer":"2","name":"Freeze authority","value":"Revoked","pass":1},{"type":"audit_layer","ts":"2026-11-06T15:15:30Z","mint":"Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump","layer":"1","name":"Mint authority","value":"Revoked","pass":1},{"type":"scan","ts":"2026-11-06T15:15:29Z","mint":"Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump","verdict":"pass","reason":null},{"type":"scan","ts":"2026-11-06T15:15:26Z","mint":"XwtudETtfdHeyXzMtNiix8q515JaCoKxYM7Hzrzpump","verdict":"kill","reason":"liq $10.9K"},{"type":"scan","ts":"2026-11-06T15:10:26Z","mint":"GxST5TftXHzCF2Sfkx3kbWmr2t8m2EUTqSZArVEbpump","verdict":"kill","reason":"liq $135.4"}]}
+{
+  "updated": 1794063725.5328586,
+  "items": [
+    {
+      "type": "scan",
+      "ts": "2026-11-07T15:02:02Z",
+      "mint": "2XaRUwHwSG6JKPkdzFtGKFR9dmXASXEzwACkCVEdpump",
+      "verdict": "kill",
+      "reason": "liq $15.5"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T15:01:02Z",
+      "mint": "kYyfwoX22TFte2Ax5xchdvDx59XkBKcjdnn4pTYpump",
+      "verdict": "kill",
+      "reason": "liq $26.4K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T14:57:20Z",
+      "mint": "vEsR5E3ikPC2BHrm9RqviRsucpQneHXSh7RZDFbpump",
+      "verdict": "kill",
+      "reason": "liq $24.3K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T14:57:20Z",
+      "mint": "9duFcKkzxmkSs1feJ9AtSXUEPpfeqQFkiJGbnXbYpump",
+      "verdict": "kill",
+      "reason": "liq $13.5K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T14:56:20Z",
+      "mint": "9Dr8si69pogpuHnWZA4ZJm9uxpJq7oSBN8kQnx9dpump",
+      "verdict": "kill",
+      "reason": "liq $63.2"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T14:26:33Z",
+      "mint": "tLEkZZNH95PYMnsF5RzYLXqkLF3fw21XgE9j3Kqpump",
+      "verdict": "kill",
+      "reason": "liq $1.7K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T11:15:22Z",
+      "mint": "GRo5A3Uyx1ojxZSH5VydUPkGSYYuXgqhwYEnxhvXpump",
+      "verdict": "kill",
+      "reason": "liq $40.8"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T11:07:46Z",
+      "mint": "2vmwavAKBQzLQffncrKJ6dYaZDYEpEtajGBzaakfpump",
+      "verdict": "kill",
+      "reason": "liq $24.7K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T11:03:46Z",
+      "mint": "E5c1JvHbwEf3ud2m4PXPMugcMDevLrnskq7sj1FTpump",
+      "verdict": "kill",
+      "reason": "liq $30.3K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T11:01:46Z",
+      "mint": "S85PKXowGaMcroEs9ZJXqUdUJK27uTdwG7SzCjXpump",
+      "verdict": "kill",
+      "reason": "liq $50.6"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T07:40:47Z",
+      "mint": "4qTycVWcJYo8H22e9qJ1cyj7wNjAPbT1ZRncrVoxpump",
+      "verdict": "kill",
+      "reason": "liq $159.8"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T07:39:47Z",
+      "mint": "AoHnvaFqHqEVbQfg2Yd38UFC38VzhSvJ8e75224apump",
+      "verdict": "kill",
+      "reason": "liq $101.7"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T07:36:46Z",
+      "mint": "DFq4aBnZkNd4PcKaSb37wRpaUGKAFUXenGbd78pTpump",
+      "verdict": "kill",
+      "reason": "liq $16.8K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T07:36:46Z",
+      "mint": "CyzEShfs4U34VL1PMrGh8c4i61v9atrLxcSChVz4pump",
+      "verdict": "kill",
+      "reason": "liq $14.5"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T07:10:56Z",
+      "mint": "FFgnd8bifG8zGBE7dij7g3HWp4gveJS4gDyjdk5epump",
+      "verdict": "kill",
+      "reason": "liq $13.4K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T07:09:28Z",
+      "mint": "Df6HMH5o829maxWdctthUK5QPdpYjYeCxfjLjFQRpump",
+      "verdict": "kill",
+      "reason": "liq $8.1"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T07:07:28Z",
+      "mint": "6NrnT77TwP5eLdj9Mfo5Nwau6CRmDk8YF3e1nQ3Tpump",
+      "verdict": "kill",
+      "reason": "liq $37.1"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T06:56:12Z",
+      "mint": "BtyhNqu58cepGmMrccos1rSuStFPo621MdtgY9qLpump",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T06:56:12Z",
+      "mint": "H6MZWk8cWxKoUULGMakxyAg2FuPQKcRzvkDKggFtgV5n",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T06:56:12Z",
+      "mint": "MNSTy46haEN7sEaeXAWBXG6zHaRikCvqf3krAEDzxr2",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-07T06:56:12Z",
+      "mint": "EXKY4iBRC4CbA4uWj9NLDVqVjNGSCED9KJ4sagCMpump",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T19:21:32Z",
+      "mint": "Di4iAmK8d2DGp6XcSCrY3dD9rt9dHTA4Gt5a43m7pump",
+      "verdict": "kill",
+      "reason": "liq $10.2"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T19:12:47Z",
+      "mint": "ELen4K1CzQGuhAieJhJQqDTJwKkgXUWXVQoRnYPvpump",
+      "verdict": "kill",
+      "reason": "liq $14.6"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T19:09:14Z",
+      "mint": "9mvYbACtwRF5SsWbajxEJHzA9N4BTzmwWuYz1A7npump",
+      "verdict": "kill",
+      "reason": "liq $86.4"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T19:09:14Z",
+      "mint": "BxB5RVvNbXJLjEhTbLgXBpjSgxD7KGvvXvaJVsi8pump",
+      "verdict": "kill",
+      "reason": "liq $14.2K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T19:06:14Z",
+      "mint": "FhLjjtZRSGqE1o8KjBDRh5ApAFgZD1V9HaQReea1pump",
+      "verdict": "kill",
+      "reason": "liq $33.9"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T19:05:14Z",
+      "mint": "27e6siMqFF8FAhWZuNpCbfC1AXMNd4StjjRNZRgRpump",
+      "verdict": "kill",
+      "reason": "liq $4.5"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T18:56:28Z",
+      "mint": "5DLMQuAJdQp4sWvPoNqNqLx8uEjWcFBaTLxLDRCBpump",
+      "verdict": "kill",
+      "reason": "liq $12.6K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T18:55:28Z",
+      "mint": "CRzmC31zoFMZjCJssEfeo6Kp3XFm3NcDZUhK2Hagpump",
+      "verdict": "kill",
+      "reason": "liq $2.2"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T18:55:28Z",
+      "mint": "GL4uo5jvgZAHUFgGfTxqZwy8EPmrtqLvMgPWTDXUpump",
+      "verdict": "kill",
+      "reason": "liq $5.6"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T17:03:22Z",
+      "mint": "CwcBCbWcoZcnGkZLZuAFLhkmxnh8Me2KvksY2LKxpump",
+      "verdict": "kill",
+      "reason": "liq $6.1"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T17:00:22Z",
+      "mint": "R8z7JdTiJVjUqRZMDfHdf4EW2ufL19NJ3tGCTNGpump",
+      "verdict": "kill",
+      "reason": "+188% in 1h"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T17:00:22Z",
+      "mint": "8csCzE6QWAjNRiVNNSSn7ifR2CZHFj3sWuTzGSDapump",
+      "verdict": "kill",
+      "reason": "liq $29.1K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T16:58:22Z",
+      "mint": "2WfFpawoUzTteUsV1bj5b6CdkEfu6Aoea5L4qhBmpump",
+      "verdict": "kill",
+      "reason": "liq $9.3"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T16:56:22Z",
+      "mint": "Cgs33XVwju57dToPZSRxAiEMxj9qWGxR7CT8j44pump",
+      "verdict": "kill",
+      "reason": "liq $30.6K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T16:56:22Z",
+      "mint": "72yxYmhLgDGwdyi2b9GjDynBB6VuG3kDxNKqDbzXh5bi",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T16:56:22Z",
+      "mint": "Xs3oZwbHvqis4NYcf4YKWmEia2eC84wSiVrcYcTqpH8",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T16:56:22Z",
+      "mint": "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T16:56:22Z",
+      "mint": "DNUTsCvKbKwu2RM72cUuW3TD9YpzArzACcqYQssjPLSk",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T16:56:22Z",
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T16:56:22Z",
+      "mint": "FgLfLhT3QoPWynZ53L3KUUsPhspWbdPUfMtmPfezXci6",
+      "verdict": "kill",
+      "reason": "never qualified"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T15:30:34Z",
+      "mint": "C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump",
+      "verdict": "kill",
+      "reason": "top 10 hold 76%"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T15:29:31Z",
+      "mint": "71rcxU9jYt6ERJ5wSWy88px6XfDFLTV6jGMHLbK5pump",
+      "verdict": "kill",
+      "reason": "liq $48.2"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T15:29:31Z",
+      "mint": "BNHAfUV21odrcFDKrqLmBDr6JREXE7c3yhuWBSNJpump",
+      "verdict": "kill",
+      "reason": "liq $23.6K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T15:28:31Z",
+      "mint": "3M8Nndh1bYN6RDGecM5fHMgQDEcGKVSh59M2qqNRpump",
+      "verdict": "kill",
+      "reason": "liq $13.4K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T15:22:30Z",
+      "mint": "yjgShaU6e2WhspLAKtVfC8RcD5tSiJBs5FLiwgzpump",
+      "verdict": "kill",
+      "reason": "liq $28.1"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T15:20:30Z",
+      "mint": "1yTgVJDuqPVtaUFR22f3TG2gtgkjQFkLN8ECv7rpump",
+      "verdict": "kill",
+      "reason": "liq $1.9K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T15:20:30Z",
+      "mint": "7JRhEEneULfcUEN3sPUL8MFxzKNyrDYj6Vu21swDpump",
+      "verdict": "kill",
+      "reason": "liq $23.6K"
+    },
+    {
+      "type": "scan",
+      "ts": "2026-11-06T15:16:29Z",
+      "mint": "XBs5WbVb7mnFnLKoJ9DzdwYhn7qNQuBc5M6DPuapump",
+      "verdict": "kill",
+      "reason": "liq $24.7K"
+    },
+    {
+      "type": "audit_layer",
+      "ts": "2026-11-06T15:15:32Z",
+      "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "layer": "6",
+      "name": "Pool age",
+      "value": "pool too young",
+      "pass": 0
+    }
+  ]
+}
