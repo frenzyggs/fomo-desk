@@ -1,16 +1,1 @@
-{
-  "updated": 1794063725.5328586,
-  "agent": "auditor",
-  "items": [
-    {
-      "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
-      "passed": false,
-      "layersChecked": 6,
-      "reason": "pool too young",
-      "ts": "2026-11-06T15:15:32Z",
-      "name": "baton",
-      "symbol": "baton",
-      "coin_url": "https://fomo.family/coin?address=Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump&chainId=1399811149&r=savipww&source=share_link"
-    }
-  ]
-}
+{"updated":1794294401.392816,"agent":"auditor","items":[{"mint":"Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump","passed":false,"layersChecked":6,"reason":"pool too young","ts":"2026-11-06T15:15:32Z","name":"baton","symbol":"baton","coin_url":"https://fomo.family/coin?address=Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump&chainId=1399811149&r=savipww&source=share_link"}]}
